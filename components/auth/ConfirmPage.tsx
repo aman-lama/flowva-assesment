@@ -54,15 +54,15 @@ export default function ConfirmEmailPage() {
         {/* Logo */}
         <div className="flex justify-center">
           <Image
-            src="/images/logo.png"
-            alt="As Green Logo"
-            width={80}
-            height={80}
+            src="/logo-full.png"
+            alt="Flowvahub"
+            width={150}
+            height={150}
             priority
           />
         </div>
 
-        <h2 className="text-2xl font-semibold text-green-700">
+        <h2 className="text-2xl font-semibold text-blue-700">
           {loading ? 'Confirming your email...' : 'Redirecting'}
         </h2>
 

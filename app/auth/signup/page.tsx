@@ -80,7 +80,7 @@ export default function SignupPage() {
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row bg-white text-gray-800">
       {/* Left Image Section */}
-      <div className="relative w-full md:w-1/2 min-h-75 bg-purple-300 md:min-h-screen">
+      <div className="relative w-full md:w-1/2 min-h-75 bg-purple-400 md:min-h-screen">
         
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
           <div className="px-6 text-center">

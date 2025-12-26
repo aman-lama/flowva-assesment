@@ -37,20 +37,14 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row bg-white text-gray-800">
       {/* Left Image Section */}
-      <div className="relative w-full md:w-1/2 min-h-[300px] md:min-h-screen">
-        <Image
-          src="/images/signup-bg.png"
-          alt="As Green Background"
-          fill
-          className="object-cover"
-          priority
-        />
+      <div className="relative bg-purple-400 w-full md:w-1/2 min-h-75 md:min-h-screen">
+        
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
           <div className="px-6 text-center">
             <h2 className="text-gray-300 text-3xl md:text-4xl font-bold leading-tight">
               Welcome Back, <br/> 
-              Artisans <br/> <span className='text-sm'>Powered by 
-              <span className="text-green-600"> As Green</span></span>
+              Turn productivity into Rewards<br/> <span className='text-sm'>Powered by 
+              <span className="text-green-600"> Flowvahub</span></span>
             </h2>
           </div>
         </div>
@@ -65,17 +59,17 @@ export default function LoginPage() {
           {/* Logo */}
           <div className="flex justify-center mb-4">
             <Image
-              src="/images/logo.png"
+              src="/logo-full.png"
               alt="As Green Logo"
-              width={80}
-              height={80}
+              width={150}
+              height={150}
               priority
             />
           </div>
 
           {/* Title */}
-          <h1 className="text-2xl font-semibold text-center text-green-800 mb-6">
-            Login to Your Vendor Account
+          <h1 className="text-xl font-medium text-center text-black-800 mb-8">
+            Login to Your Account
           </h1>
 
           {/* Email */}
@@ -89,7 +83,7 @@ export default function LoginPage() {
               type="email"
               required
               placeholder="you@example.com"
-              className="bg-[#f9f9f9] border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-100 rounded-xl px-4 py-2.5 text-sm transition-all placeholder:text-gray-400"
+              className="bg-[#f9f9f9] border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 rounded-xl px-4 py-2.5 text-sm transition-all placeholder:text-gray-400"
             />
           </div>
 
@@ -104,7 +98,7 @@ export default function LoginPage() {
               type="password"
               required
               placeholder="********"
-              className="bg-[#f9f9f9] border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-100 rounded-xl px-4 py-2.5 text-sm transition-all placeholder:text-gray-400"
+              className="bg-[#f9f9f9] border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-100 rounded-xl px-4 py-2.5 text-sm transition-all placeholder:text-gray-400"
             />
           </div>
 
@@ -112,7 +106,7 @@ export default function LoginPage() {
           <Button
             type="submit"
             disabled={loading}
-            className="w-full bg-green-600 hover:bg-green-700 text-white"
+            className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white"
           >
             {loading ? 'Logging in...' : 'Log In'}
           </Button>
