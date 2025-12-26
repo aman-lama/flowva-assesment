@@ -54,7 +54,7 @@ The primary goal was to implement Reward page and showcase various aspects of da
    git clone https://github.com/aman-lama/flowva-assesment.git
 2. **Open the project folder :**
    ```bash
-   cd flowvahub-assessment
+   cd flowva-assessment
 3. **Environment Variables: Create a .env file in the root directory and add the Supabase credentials from email**
 4. **Install Dependencies**
    ```bash
