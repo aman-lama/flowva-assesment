@@ -24,7 +24,7 @@ export default function LoginPage() {
         toast.error(result.error);
       } else {
         toast.success('Login successful!');
-        window.location.href = '/';
+        window.location.href = '/dashboard';
       }
     } catch (error) {
       toast.error('Something went wrong.');

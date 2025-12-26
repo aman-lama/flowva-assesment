@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Flowvahub Technical Assessment
 
-## Getting Started
+A modernized version of the Flowvahub application focusing on **secure authentication, responsive architecture, and real-time user feedback.**
 
-First, run the development server:
+## 📋 Project Overview
+This project addresses critical architectural gaps in the original Flowvahub platform. The primary goal was to move from a stateless client-side experience to a robust, middleware-protected application using **Next.js** and **Supabase**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Key Objectives:
+* **Session Persistence**: Implementing server-side auth checks.
+* **Responsive Refactor**: Ensuring the UI is accessible across all device breakpoints.
+* **Stateful UX**: Providing real-time notifications via React Context.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Feature | Technology |
+| :--- | :--- |
+| **Framework** | Next.js (App Router) |
+| **Database & Auth** | Supabase |
+| **Styling** | Tailwind CSS |
+| **Animations** | Framer Motion |
+| **Typography** | Google Fonts (`next/font/google`) |
+| **State** | React Context API |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Features & Improvements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔐 Authentication & Security
+* **Middleware Protection**: Added middleware to intercept requests, ensuring that protected routes (like `/dashboard`) are only accessible to authenticated users.
+* **Persistent Sessions**: Sessions are now stored in cookies rather than local state, preventing users from being logged out upon page refresh.
+* **Custom Signup Flow**: A multi-step email verification process with robust validation and error handling.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 📱 User Experience (UX)
+* **Fluid Header**: Re-engineered the navigation system to be 100% responsive using Tailwind's mobile-first breakpoints.
+* **Notification System**: A global `NotificationProvider` allows any component to trigger toast alerts.
+* **Loading States**: Integrated custom `Loader.tsx` components for better perceived performance.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 Installation & Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/flowvahub-assessment.git](https://github.com/your-username/flowvahub-assessment.git)
+   cd flowvahub-assessment
+
+
+2. **Clone the repository:**
