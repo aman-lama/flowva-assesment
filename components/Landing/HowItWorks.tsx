@@ -78,11 +78,11 @@ export default function HowItWorks() {
                 className="flex flex-col items-center text-center px-6"
               >
                 {/* Icon */}
-                
+
                 <GradientIcon gradient={step.gradient}>
-  {step.icon}
-</GradientIcon>
-                
+                  {step.icon}
+                </GradientIcon>
+
 
                 {/* Title */}
                 <h3 className="text-lg font-medium text-gray-900 mt-5">
