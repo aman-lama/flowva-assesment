@@ -24,7 +24,14 @@ This project addresses critical architectural gaps in the original Flowvahub pla
 | **State** | React Context API |
 
 ---
+## Issues in the Original App (flowvahub.com)
 
+1. **No middleware or user state management**  
+   Users who sign up and then navigate back to the landing page must sign up again, as the session is not persisted.
+
+2. **Header not fully responsive**  
+   Certain screen sizes cause layout issues in the header/navigation area.
+   
 ## ✨ Features & Improvements
 
 ### 🔐 Authentication & Security
@@ -45,7 +52,22 @@ This project addresses critical architectural gaps in the original Flowvahub pla
    ```bash
    git clone https://github.com/aman-lama/flowva-assesment.git
 2. **Open the project folder :**
-```bash
-cd flowvahub-assessment
+   ```bash
+   cd flowvahub-assessment
+3. **Environment Variables: Create a .env file in the root directory and add the Supabase credentials from email**
+4. **Install Dependencies**
+   ```bash
+   npm install
+5. **Run the development server:**
+   ```bash
+   npm run dev
 
+## 🗺 Roadmap & Limitations
+* **OAuth**: Google Login integration is not configured for this assesment.
+* **Dashboard Features**: Dashboard features were out of scope for this specific assesment.
 
+---
+
+## 📩 Contact
+For any inquiries, reach out via the developer contact provided in the original brief.
+  
