@@ -3,9 +3,10 @@
 A modernized version of the Flowvahub application focusing on **secure authentication, responsive architecture, and real-time user feedback.**
 
 ## 📋 Project Overview
-This project addresses critical architectural gaps in the original Flowvahub platform. The primary goal was to move from a stateless client-side experience to a robust, middleware-protected application using **Next.js** and **Supabase**.
+The primary goal was to implement Reward page and showcase various aspects of databases functions including auth using **Supabase** and **React**.
 
 ### Key Objectives:
+* **Reward Page**: We have implemented reward page as the landing ppage for the asssesment.
 * **Session Persistence**: Implementing server-side auth checks.
 * **Responsive Refactor**: Ensuring the UI is accessible across all device breakpoints.
 * **Stateful UX**: Providing real-time notifications via React Context.
@@ -27,7 +28,7 @@ This project addresses critical architectural gaps in the original Flowvahub pla
 ## Issues in the Original App (flowvahub.com)
 
 1. **No middleware or user state management**  
-   Users who sign up and then navigate back to the landing page must sign up again, as the session is not persisted.
+   Users who sign up and then navigate back to the landing page must login again, as the session is not persisted.
 
 2. **Header not fully responsive**  
    Certain screen sizes cause layout issues in the header/navigation area.
@@ -41,8 +42,8 @@ This project addresses critical architectural gaps in the original Flowvahub pla
 
 ### 📱 User Experience (UX)
 * **Fluid Header**: Re-engineered the navigation system to be 100% responsive using Tailwind's mobile-first breakpoints.
-* **Notification System**: A global `NotificationProvider` allows any component to trigger toast alerts.
-* **Loading States**: Integrated custom `Loader.tsx` components for better perceived performance.
+* **Announcement System**: A global `AnnouncementProvider` allows any component to trigger app announcements.
+* **Various reusable components**: Integrated various custom reusable components for better perceived performance.
 
 ---
 
