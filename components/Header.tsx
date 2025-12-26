@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const navItems = [
   {
@@ -42,6 +43,7 @@ const navItems = [
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter()
 
   return (
     <header className="w-full flex justify-center">
@@ -62,7 +64,7 @@ const Header = () => {
           {navItems.map((item) => (
             <button
               key={item.label}
-              className="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-black h-full transition-colors"
+              className="flex cursor-pointer items-center gap-1 text-sm font-medium text-gray-400 font-semibold hover:text-black h-full transition-colors"
               onMouseEnter={() => setActiveDropdown(item.label)}
             >
               {item.label}
@@ -113,14 +115,14 @@ const Header = () => {
         {/* Auth Buttons */}
         <div className="ml-auto flex items-center gap-3">
           {/* Medium devices: only Get Started */}
-          <button className="hidden md:flex lg:hidden rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
+          <button onClick={() =>router.push('/auth/login')} className="hidden md:flex cursor-pointer lg:hidden rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
             Get Started
           </button>
 
           {/* Large devices: Login + Sign Up */}
           <div className="hidden lg:flex items-center gap-3">
-            <button className="text-sm font-medium text-gray-700 hover:text-black">Login</button>
-            <button className="rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
+            <button onClick={() =>router.push('/auth/login')} className="rounded-full cursor-pointer bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">Login</button>
+            <button onClick={() =>router.push('/auth/signup')} className="rounded-full cursor-pointer bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
               Sign up
             </button>
           </div>

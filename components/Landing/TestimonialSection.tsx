@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRightCircle } from "lucide-react";
-import { ArrowCircleLeft, ArrowCircleRight, ArrowCircleUpRight, ArrowLeft } from "phosphor-react";
+import { ArrowCircleLeft, ArrowCircleRight } from "phosphor-react";
 import { useEffect, useState } from "react";
 
 const testimonials = [
