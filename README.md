@@ -43,8 +43,9 @@ This project addresses critical architectural gaps in the original Flowvahub pla
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/flowvahub-assessment.git](https://github.com/your-username/flowvahub-assessment.git)
-   cd flowvahub-assessment
+   git clone https://github.com/aman-lama/flowva-assesment.git
+2. **Open the project folder :**
+```bash
+cd flowvahub-assessment
 
 
-2. **Clone the repository:**
