@@ -11,7 +11,7 @@ export default function EmailConfirmationPage() {
         {/* Logo */}
         <div className="flex justify-center">
           <Image
-            src="/logo-full.png" // Update if needed
+            src="/logo-full.png"
             alt="As Green Logo"
             width={150}
             height={80}

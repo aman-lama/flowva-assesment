@@ -9,6 +9,7 @@ const Dashboard = () => {
       <p className="text-lg">This is the dashboard page.</p>
 
       {/* Server Action */}
+      
       <form action={logout}>
         <Button
           type="submit"

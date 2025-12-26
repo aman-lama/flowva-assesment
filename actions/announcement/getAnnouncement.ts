@@ -13,7 +13,6 @@ export async function getActiveAnnouncement() {
     .single()
 
   if (error) {
-    // Important: don't throw, allow UI to fail gracefully
     return null
   }
 

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Anton, Manrope } from "next/font/google";
 import "./globals.css";
 import { AnnouncementProvider } from "@/context/AnouncementContext";
-import AnnouncementBar from "@/components/AnnouncementBar";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -34,7 +33,7 @@ export default function RootLayout({
         className={`${manrope.variable} ${anton.variable} antialiased`}
       >
         <AnnouncementProvider>
-        
+
           {children}
         </AnnouncementProvider>
       </body>

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 
 import { useState } from 'react';
@@ -79,27 +78,31 @@ export default function SignupPage() {
 
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row bg-white text-gray-800">
+
       {/* Left Image Section */}
+
       <div className="relative w-full md:w-1/2 min-h-75 bg-purple-400 md:min-h-screen">
-        
+
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
           <div className="px-6 text-center">
             <h2 className="text-gray-300 text-3xl md:text-4xl font-bold leading-tight">
-            Turn productivity  into <span className="text-green-600">Rewards</span><br />with a calm, smart
-            space that organizes your tools, and keeps you in control.
-              
+              Turn productivity  into <span className="text-green-600">Rewards</span><br />with a calm, smart
+              space that organizes your tools, and keeps you in control.
+
             </h2>
           </div>
         </div>
       </div>
 
       {/* Right Form Section */}
+
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-6 md:p-12 bg-[#f9f9f9]">
         <form
           onSubmit={handleSubmit}
           className="bg-[#f9f9f9] rounded-3xl px-8 py-10 w-full max-w-xl"
         >
           {/* Logo */}
+
           <div className="flex justify-center mb-4">
             <Image
               src="/logo-full.png"
@@ -111,11 +114,13 @@ export default function SignupPage() {
           </div>
 
           {/* Title */}
+
           <h1 className="text-xl font-medium text-center text-black-800 mb-8">
             Create your account
           </h1>
 
           {/* Fields */}
+          
           <div className="space-y-4">
             {[
               { name: 'email', label: 'Email', type: 'text', placeholder: 'you@gmail.com' },
@@ -130,6 +135,7 @@ export default function SignupPage() {
                 <Input
                   name={field.name}
                   type={field.type}
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   value={(formData as any)[field.name]}
                   onChange={handleInputChange}
                   placeholder={field.placeholder}

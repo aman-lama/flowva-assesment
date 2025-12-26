@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <header className="w-full flex justify-center">
       <div className="w-full md:w-[80vw] h-14 md:mt-5 px-4 md:px-6 flex items-center md:rounded-full md:border md:border-gray-200 md:bg-white relative z-50">
-        
+
         {/* Logo */}
         <div className="relative h-8 w-8 shrink-0">
           <Image src="/logo.png" alt="Logo" fill priority className="object-cover" />
@@ -64,19 +64,19 @@ const Header = () => {
           {navItems.map((item) => (
             <button
               key={item.label}
-              className="flex cursor-pointer items-center gap-1 text-sm font-medium text-gray-400 font-semibold hover:text-black h-full transition-colors"
+              className="flex cursor-pointer items-center gap-1 text-sm  text-gray-400 font-semibold hover:text-black h-full transition-colors"
               onMouseEnter={() => setActiveDropdown(item.label)}
             >
               {item.label}
               <ChevronDown
-                className={`h-4 w-4 transition-transform duration-300 ${
-                  activeDropdown === item.label ? "rotate-180" : ""
-                }`}
+                className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.label ? "rotate-180" : ""
+                  }`}
               />
             </button>
           ))}
 
           {/* Animated Dropdown Panel */}
+
           <AnimatePresence>
             {activeDropdown && (
               <motion.div
@@ -86,7 +86,7 @@ const Header = () => {
                 transition={{ duration: 0.2, ease: "easeOut" }}
                 className="absolute top-[calc(75%-1px)] left-1/2 -translate-x-1/2 w-[98%] pt-4 z-[-1]"
               >
-                <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl px-6 py-6 h-[30rem] overflow-hidden">
+                <div className="bg-white border border-gray-200 rounded-3xl shadow-2xl px-6 py-6 h-120 overflow-hidden">
                   <div className="flex gap-6 h-full">
                     {navItems
                       .find((item) => item.label === activeDropdown)!
@@ -113,22 +113,27 @@ const Header = () => {
         <div className="hidden md:block mx-4 h-6 w-px bg-gray-200 shrink-0" />
 
         {/* Auth Buttons */}
+
         <div className="ml-auto flex items-center gap-3">
-          {/* Medium devices: only Get Started */}
-          <button onClick={() =>router.push('/auth/login')} className="hidden md:flex cursor-pointer lg:hidden rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
+
+          {/* Medium devices */}
+
+          <button onClick={() => router.push('/auth/login')} className="hidden md:flex cursor-pointer lg:hidden rounded-full bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
             Get Started
           </button>
 
-          {/* Large devices: Login + Sign Up */}
+          {/* Large devices */}
+
           <div className="hidden lg:flex items-center gap-3">
-            <button onClick={() =>router.push('/auth/login')} className="rounded-full cursor-pointer bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">Login</button>
-            <button onClick={() =>router.push('/auth/signup')} className="rounded-full cursor-pointer bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
+            <button onClick={() => router.push('/auth/login')} className="rounded-full cursor-pointer bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">Login</button>
+            <button onClick={() => router.push('/auth/signup')} className="rounded-full cursor-pointer bg-black px-4 py-1.5 text-sm font-medium text-white hover:bg-gray-800 transition-colors">
               Sign up
             </button>
           </div>
         </div>
 
         {/* Mobile Hamburger */}
+
         <div className="ml-auto md:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
             {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -136,6 +141,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Panel */}
+
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
@@ -158,7 +164,9 @@ const Header = () => {
                   </div>
                 </div>
               ))}
+
               {/* Get Started button */}
+              
               <button className="mt-4 rounded-full bg-black px-4 py-2 text-white font-medium hover:bg-gray-800 transition-colors">
                 Get Started
               </button>

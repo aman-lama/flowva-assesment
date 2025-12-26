@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
+
 'use server'
 
 import { revalidatePath } from 'next/cache'
@@ -23,6 +23,7 @@ export async function login(formData: FormData) {
     console.error('Login failed:', error.message);
     return { error: error.message };
   }
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   revalidatePath
   return { success: true };
 }

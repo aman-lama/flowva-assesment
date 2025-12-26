@@ -2,40 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import {rewards} from "@/lib/constants"
 
-const rewards = [
-    {
-      title: "PayPal Gift Card",
-      description: "Redeem instantly and use globally for online payments.",
-      logo: "/rewards/paypal.svg",
-    },
-    {
-      title: "Amazon Gift Card",
-      description: "Shop millions of products on Amazon worldwide.",
-      logo: "/rewards/amazon.svg",
-    },
-    {
-      title: "Apple Gift Card",
-      description: "Use on App Store, Apple Music, iCloud, and more.",
-      logo: "/rewards/apple.svg",
-    },
-    {
-      title: "Google Play Gift Card",
-      description: "Apps, games, movies, and subscriptions on Google Play.",
-      logo: "/rewards/google.svg",
-    },
-    {
-      title: "Free Udemy Course",
-      description: "Learn new skills from top instructors at no cost.",
-      logo: "/rewards/udemy.svg",
-    },
-    {
-      title: "Virtual Visa Card",
-      description: "Spend online anywhere Visa is accepted.",
-      logo: "/rewards/visa.svg",
-    },
-  ];
-  
 const container = {
   hidden: {},
   show: {
@@ -52,12 +20,12 @@ const item = {
 
 export default function RewardShowcase() {
   return (
-    <section className="py-20 bg-[rgba(144,19,254,0.1)]">
+    <section id="rewards" className="py-20 bg-[rgba(144,19,254,0.1)]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Real Rewards You’ll Love
+            Real Rewards You&apos;ll Love
           </h2>
           <p className="text-gray-600">
             Redeem points for trusted global brands and valuable digital rewards.

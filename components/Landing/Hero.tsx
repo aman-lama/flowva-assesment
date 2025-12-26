@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const container: Variants = {
   hidden: {},
@@ -26,6 +27,7 @@ const fadeUp: Variants = {
 };
 
 export default function Hero() {
+  const router = useRouter()
   return (
     <section className="relative h-full flex flex-col px-6 text-center overflow-hidden mt-10 md:mt-20 xl:items-center">
       <motion.div
@@ -36,6 +38,7 @@ export default function Hero() {
         className="flex flex-col items-center"
       >
         {/* Headline */}
+
         <motion.h1
           variants={fadeUp}
           className="max-w-3xl text-4xl md:text-6xl font-semibold tracking-wider text-gray-900"
@@ -47,7 +50,8 @@ export default function Hero() {
           </span>
         </motion.h1>
 
-        {/* Coins Field – ORIGINAL STRUCTURE */}
+        {/* Coins Field */}
+
         <motion.div
           variants={fadeUp}
           className="relative mt-12 mb-10 w-full max-w-5xl h-48 md:h-64"
@@ -73,6 +77,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Supporting Copy */}
+
         <motion.p
           variants={fadeUp}
           className="max-w-xl text-gray-600 text-base md:text-lg leading-relaxed"
@@ -82,14 +87,21 @@ export default function Hero() {
         </motion.p>
 
         {/* CTA */}
+        
         <motion.div
           variants={fadeUp}
           className="mt-10 flex flex-col sm:flex-row gap-4"
         >
-          <button className="rounded-full bg-black px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 transition">
+          <button onClick={() => router.push('/auth/signup')} className="rounded-full cursor-pointer bg-black px-6 py-3 text-sm font-medium text-white hover:bg-gray-800 transition">
             Get Started
           </button>
-          <button className="rounded-full border border-gray-300 px-6 py-3 text-sm font-medium text-gray-800 hover:bg-gray-100 transition">
+          <button
+            onClick={() => {
+              document.getElementById('rewards')?.scrollIntoView({
+                behavior: 'smooth',
+              });
+            }}
+            className="rounded-full cursor-pointer border border-gray-300 px-6 py-3 text-sm font-medium text-gray-800 hover:bg-gray-100 transition">
             View Rewards
           </button>
         </motion.div>

@@ -51,7 +51,9 @@ export default function ConfirmEmailPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#f9f9f9] text-gray-800 px-6">
       <div className="bg-white border border-gray-200 rounded-3xl shadow-md p-8 max-w-md w-full text-center space-y-6">
+
         {/* Logo */}
+        
         <div className="flex justify-center">
           <Image
             src="/logo-full.png"

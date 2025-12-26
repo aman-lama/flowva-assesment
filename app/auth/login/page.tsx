@@ -36,27 +36,31 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen w-full flex flex-col md:flex-row bg-white text-gray-800">
+
       {/* Left Image Section */}
+
       <div className="relative bg-purple-400 w-full md:w-1/2 min-h-75 md:min-h-screen">
-        
+
         <div className="absolute inset-0 bg-black/70 flex items-center justify-center">
           <div className="px-6 text-center">
             <h2 className="text-gray-300 text-3xl md:text-4xl font-bold leading-tight">
-              Welcome Back, <br/> 
-              Turn productivity into Rewards<br/> <span className='text-sm'>Powered by 
-              <span className="text-green-600"> Flowvahub</span></span>
+              Welcome Back, <br />
+              Turn productivity into Rewards<br /> <span className='text-sm'>Powered by
+                <span className="text-green-600"> Flowvahub</span></span>
             </h2>
           </div>
         </div>
       </div>
 
       {/* Right Login Form */}
+
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-6 md:p-12 bg-[#f9f9f9]">
         <form
           onSubmit={handleSubmit}
           className="bg-[#f9f9f9] rounded-3xl px-8 py-10 w-full max-w-xl font-sans"
         >
           {/* Logo */}
+
           <div className="flex justify-center mb-4">
             <Image
               src="/logo-full.png"
@@ -68,11 +72,13 @@ export default function LoginPage() {
           </div>
 
           {/* Title */}
+
           <h1 className="text-xl font-medium text-center text-black-800 mb-8">
             Login to Your Account
           </h1>
 
           {/* Email */}
+
           <div className="mb-4">
             <Label htmlFor="email" className="text-sm text-gray-700 mb-1 block">
               Email
@@ -88,6 +94,7 @@ export default function LoginPage() {
           </div>
 
           {/* Password */}
+
           <div className="mb-6">
             <Label htmlFor="password" className="text-sm text-gray-700 mb-1 block">
               Password
@@ -103,6 +110,7 @@ export default function LoginPage() {
           </div>
 
           {/* Login Button */}
+
           <Button
             type="submit"
             disabled={loading}
@@ -112,6 +120,7 @@ export default function LoginPage() {
           </Button>
 
           {/* Link to Signup */}
+          
           <div className="text-center text-sm text-gray-500 mt-6">
             Don&appos;t have an account?{' '}
             <Link href="/auth/signup" className="underline text-green-700">
