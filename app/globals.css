@@ -32,3 +32,18 @@ h2,span {
   /* Use Lustria for headings and spans */
   font-family: var(--font-manrope), sans-serif;
 }
+
+@keyframes confetti-float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(120vh) translateX(60px) rotate(360deg);
+  }
+}
+
+.animate-confetti {
+  animation-name: confetti-float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

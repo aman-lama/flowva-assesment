@@ -31,6 +31,7 @@ export default function RootLayout({
       <body
         className={`${manrope.variable} ${anton.variable} antialiased`}
       >
+        
         {children}
       </body>
     </html>
