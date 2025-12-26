@@ -1,6 +1,6 @@
 # 🚀 Flowvahub Technical Assessment
 
-A modernized version of the Flowvahub application focusing on **secure authentication, responsive architecture, and real-time user feedback.**
+The goal is **perfect UI, correct functionality, clean architecture, and proper data handling.**
 
 ## 📋 Project Overview
 The primary goal was to implement Reward page and showcase various aspects of databases functions including auth using **Supabase** and **React**.
