@@ -1,11 +1,24 @@
+'use client';
 
+import { logout } from '@/actions/auth/action';
+import { Button } from '@/components/ui/button';
 
 const Dashboard = () => {
   return (
-    <div className="h-screen flex justify-center items-center">
-      This is the dashboard page.
-    </div>
-  )
-}
+    <div className="h-screen flex flex-col justify-center items-center gap-6">
+      <p className="text-lg">This is the dashboard page.</p>
 
-export default Dashboard
+      {/* Server Action */}
+      <form action={logout}>
+        <Button
+          type="submit"
+          className="bg-red-600 hover:bg-red-700 text-white"
+        >
+          Sign out
+        </Button>
+      </form>
+    </div>
+  );
+};
+
+export default Dashboard;
